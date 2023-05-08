@@ -7,7 +7,7 @@ export default function TaskInstructionPage() {
     <div className="h-screen pt-6 overflow-y-scroll flex-c scroll-hidden">
       <img
         alt="task instruction image"
-        src="/images/logo.png"
+        src="/images/logo.jpg"
         className="h-64 max-w-sm mx-auto mb-4 bg-gray-200 w-90vw rounded-xl"
       />
       <div
