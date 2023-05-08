@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/fonts/Inter-Thin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Inter-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraBold.woff2") format("woff2");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+.f {
+  display: flex;
+}
+
+@layer utilities {
+  #__next {
+    @apply max-w-md overflow-x-hidden bg-white h-screen mx-auto relative;
+  }
+
+  .flex-c {
+    @apply flex flex-col;
+  }
+
+  .c {
+    @apply flex justify-center items-center;
+  }
+}
+
+/* for firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-700) rgba(0, 0, 0, 0);
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+/* for non-firefox */
+::-webkit-scrollbar {
+  overflow: overlay;
+  @apply w-0.5 lg:w-1.5;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  @apply w-0.5;
+}
+
+::-webkit-scrollbar-track {
+  display: initial;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-600);
+  border-radius: 5px;
+}
+
+html {
+  @apply bg-gray-900 w-full;
+}
+
+.hover_effect:hover {
+  background-color: var(--bg-color);
+}
+
+.animate-opacity {
+  animation: opacity 5s ease-out normal;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS safari devices */
+  .h-screen {
+    height: calc(100vh - 30px) !important;
+    margin-bottom: 30px;
+  }
+  .h-screen::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+}
